@@ -1,4 +1,4 @@
-package com.example.rurocker.vertex.core;
+package com.example.rurocker.vertex.first;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -7,6 +7,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import com.example.rurocker.vertex.first.MainVerticle;
 
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Vertx;

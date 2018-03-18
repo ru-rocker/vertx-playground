@@ -1,4 +1,4 @@
-package com.example.rurocker.vertex.core;
+package com.example.rurocker.vertex.first;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
