@@ -44,8 +44,9 @@ public class MainVerticleTest {
 	@Test
 	public void testMainVerticle(TestContext context) {
 		final Async async = context.async();
-
 		vertx.createHttpClient().getNow(port, "localhost", "/", response -> {
+			context.assertEquals(response.statusCode(), 200);
+		    context.assertEquals(response.headers().get("content-type"), "text/plain");
 			response.handler(body -> {
 				context.assertTrue(body.toString().contains("Hello"));
 				async.complete();
