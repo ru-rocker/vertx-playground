@@ -28,7 +28,7 @@ public class MainVerticle extends AbstractVerticle {
 		// Create a router object.
 		Router router = Router.router(vertx);
 		router.route("/").handler(routingContext -> {
-			routingContext.response().putHeader("content-type", "text/plain").end("Hello from Vert.x!");
+			routingContext.response().putHeader("content-type", "text/plain").end("Hello from Vert.x! " + Thread.currentThread().getName());
 		});
 
 		router.route("/api/products*").handler(BodyHandler.create());
